@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body style="margin: 0">
+  <!-- Write your code below -->
+ <form onSubmit="saveToLocalStorage(event)">
+  <label for="username">Username</label>
+  <input type="text" name="username" id="username">
+
+  <label for="useremail">User Email</label>
+  <input type="email" name="email" id="useremail">
+
+  <label for="usernumber">User Number</label>
+  <input type="tel" name="phone" id="usernumber">
+
+  <label for="submit-btn" ><button type="submit">Submit</button></label>
+</form>
+
+
+</body>
+<script src="localstorage.js"></script>
+
+</html>
