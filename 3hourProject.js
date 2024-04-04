@@ -24,7 +24,7 @@ function handleFormSubmit(event) {
     const deleteBtn = document.createElement('button')
     deleteBtn.type = 'button'
     deleteBtn.value = 'Delete'
-    deleteBtn.textContent = 'Delete'
+    deleteBtn.textContent = 'Delete Expense'
     deleteBtn.className ="btn btn-primary ms-5"
     deleteBtn.onclick = () => {
       localStorage.removeItem(trackExpense.expense);
@@ -33,7 +33,7 @@ function handleFormSubmit(event) {
   
     const editBtn = document.createElement('input');
     editBtn.type = 'button'
-    editBtn.textContent = 'Edit'
+    editBtn.textContent = 'Edit Expense'
     editBtn.value = 'Edit'
     editBtn.className ="btn btn-primary ms-2"
     editBtn.onclick = () => {
