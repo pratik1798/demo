@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loadData()">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <div class="container m-5">
+        <form onsubmit="handleOrder(event)">
+
+        <lable for="price" class="form-label m-2">Choose Price:</lable>
+        
+            <input type="number" id="price" name="price" class="form-control" required/>
+      
+
+        <lable for="dish" class="form-label m-2">Choose Dish:</lable>
+        <input type="text" id="dish" name="dish" class="form-control m-2" required/>
+
+        <lable for="tables" class="form-label m-2">Choose Table:</lable>
+        <select class="form-select m-2" id="tables" name="tables">
+            <option>Table 1</option>
+            <option>Table 2</option>
+            <option>Table 3</option>
+        </select>
+
+        <button type="submit" class="btn btn-primary m-2">Add to bill</button>
+    </form>
+    </div>
+  <ul id = "uList" class="list-group"></ul>
+    <ul id = "Table 1"><h2>Table 1</h2></ul>
+
+    <ul id = "Table 2"><h2>Table 2</h2></ul>
+        
+    <ul id = "Table 3"><h2>Table 3</h2></ul>
+    
+    <script src="restaurantOrder.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
