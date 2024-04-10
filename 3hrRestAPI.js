@@ -29,13 +29,14 @@ function addVote(event) {
         )
         .then((response) => {
             console.log(response.data, "added");
-            editVotes(voteDetails); // Show vote details on screen
+            editVotes(response.data);
             document.getElementById('voter').value = '';
         })
         .catch((error) => {
             console.log(error);
         });
 }
+
 function editVotes(voteDetails) {
     const totalVotes = document.getElementById('totalVotes');
     totalVotes.innerText = parseInt(totalVotes.innerText) + 1;
@@ -43,11 +44,8 @@ function editVotes(voteDetails) {
     const candidate = voteDetails.candidate;
     const candidateVotes = document.getElementById(`${candidate}Total`);
     candidateVotes.innerText = parseInt(candidateVotes.innerText) + 1;
-
-    axios.put(`https://crudcrud.com/api/5728ecafb41840d1a60f5a2c0c45af77/votingSystem/${voteDetails._id}`, voteDetails)
-                .then(response => console.log(response.data))
-                .catch(error => console.error(error));
-                
+    
+    console.log(voteDetails)
     addCandidate(candidate, candidateVotes, voteDetails);
 }
 
@@ -64,7 +62,7 @@ function addCandidate(candidate, votes, voteDetails) {
 
     newLi.appendChild(deleteBtn);
     newVoter.appendChild(newLi);
-
+    console.log(voteDetails)
     deleteBtn.onclick = () => {
         totalVotes.innerText = parseInt(totalVotes.innerText) - 1;
         votes.innerText = parseInt(votes.innerText) - 1;
