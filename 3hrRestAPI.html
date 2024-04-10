@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loadData()">
+    <h1 style="text-align: center; padding: 5px; font-weight: bold;">Class Monitor Vote</h1>
+    <p style="text-align: center; padding: 5px; font-weight: bold;">Total Votes <a id="totalVotes" name="totalVotes" >0</a></p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="container m-5">
+        <form onsubmit="addVote(event)">
+        <lable for="voter" class="form-label m-2">Choose Description:</lable>
+        <input type="text" id="voter" name="voter" class="form-control m-2" required/>
+        <lable for="candidate" class="form-label m-2">Choose A Category:</lable>
+        <select class="form-select m-2" id="candidate" name="candidate">
+            <option>Suresh</option>
+            <option>Deepak</option>
+            <option>Abhik</option>
+        </select>
+        <button type="submit" class="btn btn-primary m-2">Vote</button>
+    </form>
+    </div>
+  <ul id = "uList" class="list-group"></ul>
+    <ul id = "Suresh"><h2>Suresh</h2>
+        <p > Total <a id = "SureshTotal">0</a></p></ul>
+    <ul id = "Deepak"><h2>Deepak</h2>
+        <p >Total <a id = "DeepakTotal">0</a></p></ul>
+    <ul id = "Abhik"><h2>Abhik</h2>
+        <p >Total <a id = "AbhikTotal">0</a ></p></ul>
+    <script src="3hrRestAPI.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
